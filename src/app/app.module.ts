@@ -7,12 +7,14 @@ import { HomeComponent } from './home/home.component';
 
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { UserFormComponent } from './user-form/user-form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
