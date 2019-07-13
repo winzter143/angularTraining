@@ -1,7 +1,2 @@
 <p>home works!</p>
-
-<form [formGroup]="formPost">
-
-<input type="" name="">
-<button (click)="submit()"></button>
-</form>
+<user-form [userDetails]="user" (formValueEmitter)="submitValue($event)"></user-form>

@@ -9,8 +9,13 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 
 export class HomeComponent implements OnInit {
   postForm: FormGroup;
-
-  constructor(private formBuilder: FormBuilder) { }
+  user: {
+    name: "Jone",
+    age: 99
+  }
+  constructor(private formBuilder: FormBuilder) {
+    
+  }
 
   ngOnInit() {
   }
@@ -23,18 +28,27 @@ export class HomeComponent implements OnInit {
       });
   }
 
-  submit(){
-    console.log(this.postForm.value);
+  //submit(){
+  //  console.log(this.postForm.value);
 
     // get Specific value which "age"
-    console.log(this.postForm.controls['age'].value);    
-  }
+  //  console.log(this.postForm.controls['age'].value);    
+  //}
 
   // Lister to form changes
-  listenToPostForm(){
+  //listenToPostForm(){
     //this.postForm.valueChanges.subrcribe((form.value) => {
     //   console.log();
     //});
+  //}
+
+  getUserDetails(){
+     
   }
 
+
+   submitValue(userData){
+      this.user = userData;
+      console.log(userData);
+   }
 }
