@@ -1,1 +1,12 @@
 <p>user-form works!</p>
+<div class="row">
+    <div class="col-sm-4">
+        <form [formGroup]="formPost">
+
+            <input class="form-control" formControllerName="name">
+            <input class="form-control"formControllerName="age">
+            
+            <button (click)="submit()"></button>
+        </form>
+    </div>
+</div>

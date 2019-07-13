@@ -9,10 +9,12 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 
 export class UserFormComponent implements OnInit {
+
+
   @Input() userDetails: any; //  User Handle for user form
   
   // Oser data hold to send form data to home
-  @Output  formValueEmitter = new EventEmitter();
+  //@Output formValueEmitter = new EventEmitter();
 
   postForm: FormGroup;
 
@@ -34,16 +36,15 @@ export class UserFormComponent implements OnInit {
   }
 
   submit(){
-    console
-    //console.log(this.postForm.value);
+    console.log(this.postForm.value);
 
     // get Specific value which "age"
-    //console.log(this.postForm.controls['age'].value);    
+    console.log(this.postForm.controls['age'].value);    
   }
 
   // Lister to form changes
   listenToPostForm(){
-    this.postForm.valueChanges.subrcribe((formValue) => {
+    this.postForm.valueChanges.subscribe((formValue) => {
        console.log(formValue);
     });
   }
