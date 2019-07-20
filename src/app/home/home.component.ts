@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { UserService } from 'services/user.service';
+
 
 @Component({
   selector: 'app-home',
@@ -13,7 +15,10 @@ export class HomeComponent implements OnInit {
     name: "Jone",
     age: 99
   }
-  constructor(private formBuilder: FormBuilder) {
+  
+  //constructor(private formBuilder: FormBuilder) {
+  constructor(private userSerive: UserService) {
+
     
   }
 
@@ -51,4 +56,8 @@ export class HomeComponent implements OnInit {
       this.user = userData;
       console.log(userData);
    }
+
+
+
+
 }
